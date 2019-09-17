@@ -63,7 +63,7 @@ footer {
 		{/if}
 	</header>
 	<main>
-		<img src="{photo.src.medium}" alt="{`Photo by ${photo.photographer}`}">
+		<img src="{photo.src.large}" alt="{`Photo by ${photo.photographer}`}">
 	</main>
 	<footer>
 		{#if stage == 'prepare'}
