@@ -35,6 +35,36 @@
 			"relatedWords": [
 				"storm", "thunder", "bolt"
 			]
+		},
+		{
+			"term": "tree",
+			"relatedWords": [
+				"branch", "plant", "tall"
+			]
+		},
+		{
+			"term": "desert",
+			"relatedWords": [
+				"dry", "hot", "sand"
+			]
+		},
+		{
+			"term": "computer",
+			"relatedWords": [
+				"technology", "laptop", "desktop"
+			]
+		},
+		{
+			"term": "cat",
+			"relatedWords": [
+				"kitten", "feline", "cute"
+			]
+		},
+		{
+			"term": "tea",
+			"relatedWords": [
+				"drink", "cup", "liquid"
+			]
 		}
 	]
 }
