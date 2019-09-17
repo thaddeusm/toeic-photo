@@ -50,6 +50,7 @@ h4 {
 ul {
 	margin-top: 20px;
 	display: grid;
+	list-style: none;
 }
 
 li {
@@ -59,6 +60,7 @@ li {
 button {
 	color: var(--white);
 	background: var(--black);
+	padding: 10px;
 }
 
 main {
