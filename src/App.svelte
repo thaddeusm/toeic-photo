@@ -65,8 +65,8 @@
 		mode = event.detail;
 
 		if (mode == 'start') {
-			chooseRandomPhoto('taboo');
-			chooseRandomPhoto('test');
+			getTestPhotos();
+	                getTabooPhotos();
 		}
 	}
 
