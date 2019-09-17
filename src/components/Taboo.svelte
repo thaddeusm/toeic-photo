@@ -113,9 +113,9 @@ footer {
 	<main>
 		<img src="{photo.src.large}" alt="{`Photo by ${photo.photographer}`}">
 	</main>
-	<footer>
-		{#if stage == 'describe'}
-			<Countdown seconds="{120}" on:stopped={endTask} />
-		{/if}
-	</footer>
+	{#if stage == 'describe'}
+	        <footer>
+		        <Countdown seconds="{120}" on:stopped={endTask} />
+	        </footer>
+	{/if}
 </div>
