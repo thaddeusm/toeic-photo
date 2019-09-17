@@ -34,7 +34,7 @@ header {
 
 aside {
 	position: fixed;
-	top: 20px;
+	top: 10px;
 	right: 12px;
 	padding: 10px;
 }
