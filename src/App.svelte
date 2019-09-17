@@ -6,10 +6,10 @@
 	import searchTerms from './searchTerms.json';
 
 	let testPhotos = [];
-	let testPhotoIndex;
+	let testPhotoIndex = null;
 
 	let tabooTopicIndex = null;
-	let tabooPhotoIndex;
+	let tabooPhotoIndex = null;
 	let tabooPhotos = [];
 
 	let mode = 'start';
@@ -59,12 +59,22 @@
 		})
 		request.send();
 	}
+	
+	function reset() {
+	        testPhotos = [];
+	        testPhotoIndex = null;
+
+	        tabooTopicIndex = null;
+	        tabooPhotoIndex = null;
+	        tabooPhotos = [];
+	}
 
 	function changeMode(event) {
 		console.log(event.detail);
 		mode = event.detail;
 
 		if (mode == 'start') {
+			reset();
 			getTestPhotos();
 	                getTabooPhotos();
 		}
