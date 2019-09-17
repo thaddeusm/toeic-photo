@@ -13,9 +13,27 @@
 			]
 		},
 		{
+			"term": "ice cream",
+			"relatedWords": [
+				"sweet", "dessert", "cold"
+			]
+		},
+		{
 			"term": "mountain",
 			"relatedWords": [
 				"hike", "hill", "high"
+			]
+		},
+		{
+			"term": "river",
+			"relatedWords": [
+				"stream", "water", "creek"
+			]
+		},
+		{
+			"term": "street",
+			"relatedWords": [
+				"city", "road", "highway"
 			]
 		},
 		{
