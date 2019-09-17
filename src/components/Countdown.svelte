@@ -26,7 +26,9 @@
 		dispatch('stopped');
 	}
 
-	start()
+	setTimeout(function() {
+		start()
+	}, 2000);
 </script>
 
 <style>
