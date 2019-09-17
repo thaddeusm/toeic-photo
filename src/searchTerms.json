@@ -1,0 +1,40 @@
+{
+	"terms": [
+		{
+			"term": "dog",
+			"relatedWords": [
+				"bark", "puppy", "canine"
+			]
+		},
+		{
+			"term": "cake",
+			"relatedWords": [
+				"sweet", "dessert", "chocolate"
+			]
+		},
+		{
+			"term": "mountain",
+			"relatedWords": [
+				"hike", "hill", "high"
+			]
+		},
+		{
+			"term": "building",
+			"relatedWords": [
+				"architecture", "city", "structure"
+			]
+		},
+		{
+			"term": "flower",
+			"relatedWords": [
+				"garden", "plant", "petal"
+			]
+		},
+		{
+			"term": "lightning",
+			"relatedWords": [
+				"storm", "thunder", "bolt"
+			]
+		}
+	]
+}

@@ -1,0 +1,75 @@
+<script>
+	import Countdown from './Countdown.svelte';
+	import { createEventDispatcher } from 'svelte';
+
+	const dispatch = createEventDispatcher();
+
+	export let photo;
+
+	let stage = 'prepare';
+
+	function startTask() {
+		stage = 'describe'
+	}
+
+	function endTask() {
+		console.log('end')
+		dispatch('change-mode', 'start');
+	}
+</script>
+
+<style>
+header {
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	display: inline-block;
+	padding: 0 10px;
+	background: var(--black);
+}
+
+h1 {
+	color: var(--light-gray);
+}
+
+main {
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	height: 100vh;
+}
+
+img {
+	display: block;
+}
+
+footer {
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+	display: inline-block;
+	padding: 0 10px;
+	background: var(--black);
+}
+</style>
+
+<div>
+	<header>
+		{#if stage == 'prepare'}
+			<h1>Prepare</h1>
+		{:else}
+			<h1>Describe</h1>
+		{/if}
+	</header>
+	<main>
+		<img src="{photo.src.medium}" alt="{`Photo by ${photo.photographer}`}">
+	</main>
+	<footer>
+		{#if stage == 'prepare'}
+			<Countdown seconds="{30}" on:stopped={startTask} />
+		{:else}
+			<Countdown seconds="{45}" on:stopped={endTask} />
+		{/if}
+	</footer>
+</div>
