@@ -1,5 +1,4 @@
 <script>
-	import { onMount } from 'svelte';
 	import { createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher();
@@ -27,9 +26,7 @@
 		dispatch('stopped');
 	}
 
-	onMount(async () => {
-		start()
-	});
+	start()
 </script>
 
 <style>
