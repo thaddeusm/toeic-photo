@@ -7,14 +7,13 @@
 	export let photo;
 	export let tabooData;
 
-	console.log(tabooData);
-
 	let stage = 'describe';
 
-	function endTask() {
-		console.log('end')
+	let pauseCountdown = false;
 
-		stage = 'win'
+	function endTask() {
+		stage = 'win';
+		pauseCountdown = true;
 	}
 
 	function reset() {
@@ -113,9 +112,7 @@ footer {
 	<main>
 		<img src="{photo.src.large}" alt="{`Photo by ${photo.photographer}`}">
 	</main>
-	{#if stage == 'describe'}
-	        <footer>
-		        <Countdown seconds="{120}" on:stopped={endTask} />
-	        </footer>
-	{/if}
+    <footer>
+        <Countdown seconds="{120}" on:stopped={endTask} {pauseCountdown} />
+    </footer>
 </div>

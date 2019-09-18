@@ -4,13 +4,18 @@
 	const dispatch = createEventDispatcher();
 
 	export let seconds;
+	export let pauseCountdown = false;
 
 	let time = seconds;
 
 	let running;
 
 	function countdown() {
-		time--;
+		if (pauseCountdown) {
+			stop();
+		} else {
+			time--;
+		}
 
 		if (time == 0) {
 			stop();
@@ -37,4 +42,4 @@ h3 {
 }
 </style>
 
-<h3>{time}</h3>
+<h3>{time} / {seconds}</h3>
