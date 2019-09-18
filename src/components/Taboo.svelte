@@ -9,7 +9,11 @@
 
 	let stage = 'describe';
 
-	let pauseCountdown = false;
+	let pauseCountdown = true;
+
+	function startCountdown() {
+		pauseCountdown = false;
+	}
 
 	function endTask() {
 		stage = 'win';
@@ -73,6 +77,7 @@ main {
 
 img {
 	display: block;
+	max-width: 100vw;
 }
 
 footer {
@@ -110,7 +115,7 @@ footer {
 		{/if}
 	</aside>
 	<main>
-		<img src="{photo.src.large}" alt="{`Photo by ${photo.photographer}`}">
+		<img src="{photo.src.large}" alt="{`Photo by ${photo.photographer}`}" on:error="{reset}" on:load="{startCountdown}">
 	</main>
     <footer>
         <Countdown seconds="{120}" on:stopped={endTask} {pauseCountdown} />

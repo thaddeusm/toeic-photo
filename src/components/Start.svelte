@@ -19,11 +19,13 @@
 	main {
 		height: 100vh;
 		display: grid;
-		grid-template-rows: 25vh 1fr 25vh;
+		grid-template-rows: .5fr 1fr 1fr 1fr .5fr;
 		grid-template-areas: 
+			"."
 			"top"
 			"logo"
-			"bottom";
+			"bottom"
+			".";
 		text-align: center;
 		align-items: center;
 		background: var(--black);
@@ -46,7 +48,7 @@
 	grid-area: top;
 }
 
-.top {
+.bottom {
 	grid-area: bottom;
 }
 
@@ -66,11 +68,11 @@ button {
 
 <main>
 	<section class="top">
-		<button on:click="{selectTaboo}" disabled="{!loaded}">Taboo</button>
+		<button on:click="{selectTest}" disabled="{!loaded}">Test</button>
 	</section>
 	<img src="./logo.svg" alt="logo">
 	<section class="bottom">
-		<button on:click="{selectTest}" disabled="{!loaded}">Test</button>
+		<button on:click="{selectTaboo}" disabled="{!loaded}">Taboo</button>		
 	</section>
 </main>
 

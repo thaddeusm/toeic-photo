@@ -8,12 +8,17 @@
 
 	let stage = 'prepare';
 
+	let pauseCountdown = true;
+
+	function startCountdown() {
+		pauseCountdown = false;
+	}
+
 	function startTask() {
 		stage = 'describe'
 	}
 
 	function endTask() {
-		console.log('end')
 		dispatch('change-mode', 'start');
 	}
 </script>
@@ -42,6 +47,7 @@ main {
 
 img {
 	display: block;
+	max-width: 100vw;
 }
 
 footer {
@@ -63,11 +69,11 @@ footer {
 		{/if}
 	</header>
 	<main>
-		<img src="{photo.src.large}" alt="{`Photo by ${photo.photographer}`}">
+		<img src="{photo.src.large}" alt="{`Photo by ${photo.photographer}`}" on:error="{endTask}" on:load="{startCountdown}">
 	</main>
 	<footer>
 		{#if stage == 'prepare'}
-			<Countdown seconds="{30}" on:stopped={startTask} />
+			<Countdown seconds="{30}" on:stopped={startTask} {pauseCountdown} />
 		{:else}
 			<Countdown seconds="{45}" on:stopped={endTask} />
 		{/if}
