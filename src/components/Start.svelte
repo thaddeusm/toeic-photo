@@ -17,7 +17,7 @@
 <style>
 @media screen and (max-width: 450px) {
 	main {
-		height: 100vh;
+		height: 100%;
 		display: grid;
 		grid-template-rows: .5fr 1fr 1fr 1fr .5fr;
 		grid-template-areas: 
@@ -34,7 +34,7 @@
 
 @media screen and (min-width: 451px) {
 	main {
-		height: 100vh;
+		height: 100%;
 		display: grid;
 		grid-template-columns: 25vw 1fr 25vw;
 		grid-template-areas: "top logo bottom";
