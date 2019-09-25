@@ -15,6 +15,16 @@
 </script>
 
 <style>
+@keyframes flip {
+	from {transform: rotateY(0);}
+	to {transform: rotateY(160deg);}
+}
+
+@keyframes fade {
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
 @media screen and (max-width: 450px) {
 	main {
 		height: 100%;
@@ -44,6 +54,14 @@
 	}
 }
 
+.loading {
+	animation-name: flip;
+	animation-duration: infinite;
+	animation-delay: 200ms;
+	animation-timing-function: ease-in;
+	animation-duration: .7s;
+}
+
 .top {
 	grid-area: top;
 }
@@ -63,16 +81,23 @@ button {
 	padding: 1em 2em;
 	background: var(--yellow);
 	border-radius: .5em;
+	animation-name: fade;
+	animation-duration: 1s;
+	animation-timing-function: ease-in;
 }
 </style>
 
 <main>
 	<section class="top">
-		<button on:click="{selectTest}" disabled="{!loaded}">Test</button>
+		{#if loaded}
+			<button on:click="{selectTest}">Test</button>
+		{/if}
 	</section>
-	<img src="./logo.svg" alt="logo">
+	<img src="./logo.svg" alt="logo" class="loading">
 	<section class="bottom">
-		<button on:click="{selectTaboo}" disabled="{!loaded}">Taboo</button>		
+		{#if loaded}
+			<button on:click="{selectTaboo}">Taboo</button>
+		{/if}	
 	</section>
 </main>
 
