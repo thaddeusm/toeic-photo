@@ -115,7 +115,7 @@ footer {
 		{/if}
 	</aside>
 	<main>
-		<img src="{photo.src.large}" alt="{`Photo by ${photo.photographer}`}" on:error="{reset}" on:load="{startCountdown}">
+		<img src="{photo.src.large}" alt="{`Photo by ${photo.photographer}`}" on:load="{startCountdown}" on:error="{reset}">
 	</main>
     <footer>
         <Countdown seconds="{120}" on:stopped={endTask} {pauseCountdown} />
