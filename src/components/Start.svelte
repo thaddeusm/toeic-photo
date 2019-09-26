@@ -56,7 +56,7 @@
 
 .loading {
 	animation-name: flip;
-	animation-duration: infinite;
+	animation-iteration-count: infinite;
 	animation-delay: 200ms;
 	animation-timing-function: ease-in;
 	animation-duration: .7s;
@@ -83,7 +83,7 @@ button {
 	border-radius: .5em;
 	animation-name: fade;
 	animation-duration: 1s;
-	animation-timing-function: ease-in;
+	animation-timing-function: ease-in-out;
 }
 </style>
 
@@ -93,7 +93,7 @@ button {
 			<button on:click="{selectTest}">Test</button>
 		{/if}
 	</section>
-	<img src="./logo.svg" alt="logo" class="loading">
+	<img src="./logo.svg" alt="logo" class:loading="{!loaded}">
 	<section class="bottom">
 		{#if loaded}
 			<button on:click="{selectTaboo}">Taboo</button>
