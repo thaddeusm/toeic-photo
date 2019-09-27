@@ -58,8 +58,8 @@
 	animation-name: flip;
 	animation-iteration-count: infinite;
 	animation-delay: 200ms;
-	animation-timing-function: ease-in;
-	animation-duration: .7s;
+	animation-timing-function: ease-in-out;
+	animation-duration: 1.5s;
 }
 
 .top {
