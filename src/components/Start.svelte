@@ -17,7 +17,7 @@
 <style>
 @keyframes flip {
 	from {transform: rotateY(0);}
-	to {transform: rotateY(160deg);}
+	to {transform: rotateY(180deg);}
 }
 
 @keyframes fade {
@@ -57,9 +57,8 @@
 .loading {
 	animation-name: flip;
 	animation-iteration-count: infinite;
-	animation-delay: 200ms;
 	animation-timing-function: ease-in-out;
-	animation-duration: 1.5s;
+	animation-duration: 1.3s;
 }
 
 .top {
