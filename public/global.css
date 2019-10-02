@@ -19,10 +19,10 @@ html, body {
 	height: 100%;
 }
 
-body {
+/*body {
     height: 100vh;
     width: 100vw;
-}
+}*/
 
 @font-face {
 	font-family: "ArchivoNarrow";
