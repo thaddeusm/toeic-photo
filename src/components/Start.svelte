@@ -29,7 +29,7 @@
 	main {
 		height: 100%;
 		display: grid;
-		grid-template-rows: .5fr 1fr 1fr 1fr .5fr;
+		grid-template-rows: 15% 20% 30% 20% 15%;
 		grid-template-areas: 
 			"."
 			"top"
@@ -46,7 +46,7 @@
 	main {
 		height: 100%;
 		display: grid;
-		grid-template-columns: 25vw 1fr 25vw;
+		grid-template-columns: 25% 50% 25%;
 		grid-template-areas: "top logo bottom";
 		text-align: center;
 		align-items: center;

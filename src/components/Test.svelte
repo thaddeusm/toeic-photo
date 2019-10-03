@@ -24,6 +24,10 @@
 </script>
 
 <style>
+.container {
+	height: 100%;
+}
+
 header {
 	position: fixed;
 	top: 10px;
@@ -38,11 +42,11 @@ h1 {
 }
 
 main {
+	height: 100%;
 	display: grid;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	height: 100vh;
 }
 
 img {
@@ -60,7 +64,7 @@ footer {
 }
 </style>
 
-<div>
+<div class="container">
 	<header>
 		{#if stage == 'prepare'}
 			<h1>Prepare</h1>

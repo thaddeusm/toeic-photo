@@ -26,6 +26,10 @@
 </script>
 
 <style>
+.container {
+	height: 100%;
+}
+
 header {
 	position: fixed;
 	top: 10px;
@@ -72,7 +76,7 @@ main {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	height: 100vh;
+	height: 100%;
 }
 
 img {
@@ -94,7 +98,7 @@ footer {
 }
 </style>
 
-<div>
+<div class="container">
 	<header>
 		{#if stage == 'describe'}
 			<h1 class="yellow">{tabooData.term}</h1>
